@@ -47,26 +47,33 @@ h2 {
   .c{
     color: navy;
     font-style:italic;
-  }
+}
     </style>
 
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
   <h1> 🎉HAPPY BIRTHDAY🎉 </h1>
-  <h2>  ☺</h2>
+  <h2 class="name"></h2>
   <!--Tab to edit-->
 
   <p class="a">"Wishing you a very Happy Birthday,...Your wisdom and kindness inspired us everyday.May this year bring you success, happiness,and all the wonderful things you deserve"💝💝💝</p>
-  <img class="p"src="Screenshot_20250206-17170">
+  <img class="p image1"src="Screenshot_20250206-17170">
   <p class="x">This flowers are for you dear</p>
-  <img class="q"src="Screenshot_20250116-200748_1.png">
+  <img class="q image2"src="Screenshot_20250116-200748_1.png">
   <p class="b"> 🌷🌷...apko pata hai hamare dil me apke liye kitni respect hai.Hum bohot grateful hai ki aap...🌷🌷</p>
   <p class="c"> 🌹🌹🌹...hum apko bohot miss karte hai...oh nhi hum apko miss nhi karte hai, kyuki miss toh hum usko karte hai na jinko hum bhul jate hai or aapko bhula pana,that can't be possible.So yeah we don't miss you but we love you sooo much!!!.And I'm just waiting for the day when we will meet again.Once again apko very Happy Birthday.🌹🌹🌹 </p>
     <!--Tab to edit-->
-  <script src=" main.js"></script>
+  <script>
+    const name = document.querySelector('.name');
+    const image1 = document.querySelector('.image1');
+    const image2 = document.querySelector('.image2');
+    name.innerText = new URLSearchParams(location.search).get('name') || ''
+    image1.src = new URLSearchParams(location.search).get('img1')
+    image2.src = new URLSearchParams(location.search).get('img2')
+  </script>
 </body>
 </html>
